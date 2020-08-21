@@ -110,15 +110,15 @@ public class Main {
 
         // Reading input
         Scanner scanner = new Scanner(System.in);
-//        System.out.print("Enter your age:");
-//        int age = scanner.nextInt();
-//        scanner.nextLine(); // .nextInt() only takes the int value you entered,
-//                            // the \n generated when pressing enter key got passed
-//                            // to the next scanner.
-//                            // You have to put a .nextLine() after .nextInt() to consume \n
-//        System.out.print("Enter your name:");
-//        letters = scanner.nextLine();
-//        System.out.println("You are " + letters + ", and your age is " + age);
+        System.out.print("Enter your age:");
+        int age = scanner.nextInt();
+        scanner.nextLine(); // .nextInt() only takes the int value you entered,
+                            // the \n generated when pressing enter key got passed
+                            // to the next scanner.
+                            // You have to put a .nextLine() after .nextInt() to consume \n
+        System.out.print("Enter your name:");
+        letters = scanner.nextLine();
+        System.out.println("You are " + letters + ", and your age is " + age);
 
 
         // Comparison operators
@@ -168,35 +168,35 @@ public class Main {
 
 
         // FizzBuzz
-//        System.out.print("Enter a number: ");
-//        int number = scanner.nextInt();
-//        scanner.nextLine();
-//        if (number % 15 ==0) {
-//            System.out.println("FizzBuzz");
-//        } else if (number % 5 == 0) {
-//            System.out.println("Fizz");
-//        } else if (number % 3 == 0) {
-//            System.out.println("Buzz");
-//        } else {
-//            System.out.println(number);
-//        }
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+        if (number % 15 ==0) {
+            System.out.println("FizzBuzz");
+        } else if (number % 5 == 0) {
+            System.out.println("Fizz");
+        } else if (number % 3 == 0) {
+            System.out.println("Buzz");
+        } else {
+            System.out.println(number);
+        }
 
         // Mortgage Calculator
-//        System.out.print("Principal: ");
-//        int principal = scanner.nextInt();
-//        System.out.println("Annual Interest Rate: ");
-//        float anualRate = scanner.nextFloat();
-//        float monthlyRate = anualRate/100/12;
-//        System.out.println("Period (years): ");
-//        byte years = scanner.nextByte();    // it is also the number of payments
-//
-//        double mortgage = principal *
-//                (monthlyRate*(Math.pow(1.0+monthlyRate,years*12)))
-//                / (Math.pow(1.0+monthlyRate,years*12)-1.0);
-//        System.out.println("Mortgage: " + mortgage);
+        System.out.print("Principal: ");
+        int principal = scanner.nextInt();
+        System.out.println("Annual Interest Rate: ");
+        float anualRate = scanner.nextFloat();
+        float monthlyRate = anualRate/100/12;
+        System.out.println("Period (years): ");
+        byte years = scanner.nextByte();    // it is also the number of payments
+
+        double mortgage = principal *
+                (monthlyRate*(Math.pow(1.0+monthlyRate,years*12)))
+                / (Math.pow(1.0+monthlyRate,years*12)-1.0);
+        System.out.println("Mortgage: " + mortgage);
 
         // Mortgage Calculator using Methods
-//        mortgageCalculator();
+        mortgageCalculator();
 
 
         // For loops
@@ -208,34 +208,34 @@ public class Main {
 
         // While loops
         String input = "";
-//        while (!input.equals("quit")){
-//            System.out.print("Input \"quit\": ");
-//            input = scanner.next().toLowerCase();
-//            System.out.println(input);
-//        }
-//        System.out.println("\n");
-//
-//        // Do-while loop, executed at least once
-//        do {
-//            System.out.print("Input \"quit\": ");
-//            input = scanner.next().toLowerCase();
-//            System.out.println(input);
-//        } while (!input.equals("quit")); // it checks conditions after code
+        while (!input.equals("quit")){
+            System.out.print("Input \"quit\": ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+        System.out.println("\n");
+
+        // Do-while loop, executed at least once
+        do {
+            System.out.print("Input \"quit\": ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        } while (!input.equals("quit")); // it checks conditions after code
                                         // gets executed
 
         // Break and continue statement
             // break statement terminates the look
             // continue statement goes back to the beginning of the loop
-//        while (true) {
-//            System.out.print("Input \"quit\": ");
-//            input = scanner.next().toLowerCase();
-//            if (input.equals("pass"))
-//                continue;
-//            if (input.equals("quit"))
-//                break;
-//            System.out.println(input);
-//        }
-//        System.out.println("\n");
+        while (true) {
+            System.out.print("Input \"quit\": ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("pass"))
+                continue;
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+        }
+        System.out.println("\n");
 
 
         // For-each loop
@@ -251,37 +251,37 @@ public class Main {
 
 
         // Mortgage Calculator with input verification
-//        int principal;
-//        float monthlyRate;
-//        byte years;
-//        while (true){
-//            System.out.print("Principal ($1k-$1M): ");
-//            principal = scanner.nextInt();
-//            if (principal > 1_000 && principal <1_000_000)
-//                break;
-//            System.out.println("Enter a value btween 1k and 1M.");
-//        }
-//        while (true) {
-//            System.out.println("Annual Interest Rate (0-30): ");
-//            float anualRate = scanner.nextFloat();
-//            if (anualRate > 0 && anualRate <= 30){
-//                monthlyRate = anualRate/100/12;
-//                break;
-//            }
-//            System.out.println("Enter a rate greater than 0 and less than and equal to 30.");
-//        }
-//        while (true) {
-//            System.out.println("Period (years): ");
-//            years = scanner.nextByte();    // it is also the number of payments
-//            if (years <= 30 && years >= 0)
-//                break;
-//            System.out.println("Enter a value between 0 and 30.");
-//        }
-//
-//        double mortgage = principal *
-//                (monthlyRate*(Math.pow(1.0+monthlyRate,years*12)))
-//                / (Math.pow(1.0+monthlyRate,years*12)-1.0);
-//        System.out.println("Mortgage: " + mortgage);
+        int principal;
+        float monthlyRate;
+        byte years;
+        while (true){
+            System.out.print("Principal ($1k-$1M): ");
+            principal = scanner.nextInt();
+            if (principal > 1_000 && principal <1_000_000)
+                break;
+            System.out.println("Enter a value btween 1k and 1M.");
+        }
+        while (true) {
+            System.out.println("Annual Interest Rate (0-30): ");
+            float anualRate = scanner.nextFloat();
+            if (anualRate > 0 && anualRate <= 30){
+                monthlyRate = anualRate/100/12;
+                break;
+            }
+            System.out.println("Enter a rate greater than 0 and less than and equal to 30.");
+        }
+        while (true) {
+            System.out.println("Period (years): ");
+            years = scanner.nextByte();    // it is also the number of payments
+            if (years <= 30 && years >= 0)
+                break;
+            System.out.println("Enter a value between 0 and 30.");
+        }
+
+        double mortgage = principal *
+                (monthlyRate*(Math.pow(1.0+monthlyRate,years*12)))
+                / (Math.pow(1.0+monthlyRate,years*12)-1.0);
+        System.out.println("Mortgage: " + mortgage);
 
 
         // Mortgage Calculator using Multiple Methods
